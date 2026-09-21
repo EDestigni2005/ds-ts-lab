@@ -16,3 +16,19 @@ function highestExtension(cs: Colleague[]): Colleague {
   return result[cs.length - 1];
 }
 console.log(highestExtension(colleagues.current));
+
+function addColleague(cs : Colleague[], Name: string, Department: string, Email: string) {
+
+  const newColleague : Colleague = {
+    name: Name,
+    department: Department,
+    contact: {
+      email: Email,
+      extension: 133,
+    },
+  }
+  colleagues.current.push(newColleague)
+}
+
+addColleague(colleagues.current, "Sheild O Connell", "HR", "soc@here.com");
+console.log(colleagues.current.filter((c) => c.name === "Sheild O Connell"));
